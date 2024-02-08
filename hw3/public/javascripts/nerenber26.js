@@ -1,4 +1,9 @@
+//Jonathan Nerenberg
+
+//runs the order button
 eventHandler = function (event) {
+    
+    //checks for vegan
     var check1 = document.getElementById("Notes").value.includes("vegan");
     var check2 = document.getElementById("Notes").value.includes("Vegan");
     if (check1) {
@@ -8,6 +13,7 @@ eventHandler = function (event) {
         alert("Alert: You entered \"Vegan\", and cheesecake contains dairy!");
     }
     else {
+        //grabs values from various elements and stores in variables for printing
         var quan = document.getElementById("quantity").value;
 
         var radios = document.getElementsByName('top');
@@ -20,25 +26,30 @@ eventHandler = function (event) {
         }
         var notes = document.getElementById("Notes").value;
 
+        //delete old elements
         const element1 = document.getElementById("Table");
         element1.remove();
         const element2 = document.getElementById("formDiv");
         element2.remove();
 
+        //make new element
         var tempDiv = document.getElementById("temp");
-
+        
         var newdiv = document.createElement("div");
         newdiv.innerHTML = '<span id="myText">Thanks for ordering!</span>';
 
         tempDiv.appendChild(newdiv);
+        
         document.getElementById("myText").innerHTML = 'Thank you for ordering! <br>Quantity: ' + quan + '<br>Toppings: ' + toppings + '<br>Notes: ' + notes;
     }
 }    
-//
+
+//caller of order function
 $(document).ready(function() {
     $("#OrderButton").click(eventHandler);
 });
 
-//function myFunction(selection) {
-   // document.getElementById("dropdown").textContent = selection;
-//}
+//for dropdown menu
+function myFunction(selection) {
+   document.getElementById("dropdown").textContent = selection;
+}
