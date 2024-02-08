@@ -1,0 +1,30 @@
+/*Jonathan Nerenberg*/
+body {
+  background-color: lightblue;
+  font-family: 'Courier New', monospace;
+}
+
+h1 {
+  color: red;
+  font-family: 'Brush Script MT', cursive;
+}
+
+table {
+	background-color: #d7293f;
+}
+
+.dropdown { 
+    display: inline-block; 
+    position: relative; 
+}
+
+.dropdown-content {
+      display: none;
+      position: absolute;
+      overflow: scroll;
+	  height: 200%
+}
+
+.dropdown:hover .dropdown-content {
+      display: block;
+}

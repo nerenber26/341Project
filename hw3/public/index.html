@@ -1,0 +1,112 @@
+<!--Jonathan Nerenberg-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheets/nerenber26.css" />
+	<title>Cheesecake Order Form</title>
+
+</head>
+
+<body>
+
+	<h1>Cheesecake Order Form</h1>
+
+	<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg"
+		alt="Cheesecake" style="width:180px;height:180px;">
+
+
+	<table id="Table">
+
+		<tr>
+
+			<td>
+				<p>Quantity</p>
+
+			</td>
+
+			<td>
+				<p>Topping</p>
+
+			</td>
+		</tr>
+
+		<tr>
+
+			<td>
+				<select name="quantity" id="quantity">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</td>
+
+			<td>
+				<form>
+					<input type="radio" id="plain" name="top" value="Plain"> <label for="plain">Plain</label><br>
+					<input type="radio" id="cher" name="top" value="Cherry"> <label for="cher">Cherry</label><br>
+					<input type="radio" id="choc" name="top" value="Chocolate"> <label for="choc">Chocolate</label>
+				</form>
+			</td>
+
+		</tr>
+
+	</table>
+
+	<div id="temp"></div>
+
+	<div id="formDiv">
+		<p>
+			Notes:
+		</p>
+
+		<textarea rows="4" cols="50" id="Notes">
+Enter any special instructions here.
+</textarea>
+		<br>
+
+		<button id="OrderButton" type="button">Order</button>
+	</div>
+
+	<h3>Total Orders Last <div class="dropdown">
+			<p id="dropdown" style="background-color:#d7293f;">Jan</p>
+			<div class="dropdown-content">
+				<button onclick="myFunction(this.value)" value="January">January</button>
+				<button onclick="myFunction(this.value)" value="February">February</button>
+				<button onclick="myFunction(this.value)" value="March">March</button>
+				<button onclick="myFunction(this.value)" value="April">April</button>
+				<button onclick="myFunction(this.value)" value="May">May</button>
+				<button onclick="myFunction(this.value)" value="June">June</button>
+				<button onclick="myFunction(this.value)" value="July">July</button>
+				<button onclick="myFunction(this.value)" value="August">August</button>
+				<button onclick="myFunction(this.value)" value="September">September</button>
+				<button onclick="myFunction(this.value)" value="October">October</button>
+				<button onclick="myFunction(this.value)" value="November">November</button>
+				<button onclick="myFunction(this.value)" value="December">December</button>
+			</div>
+
+
+		</div>
+	</h3>
+
+	<div>
+		<ul>
+			<li>
+				11 cherry
+			</li>
+
+			<li>
+				17 chocolate
+			</li>
+
+			<li>
+				31 plain
+			</li>
+		</ul>
+	</div>
+
+</body>
+
+</html>
