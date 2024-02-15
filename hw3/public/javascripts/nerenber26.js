@@ -51,5 +51,17 @@ $(document).ready(function() {
 
 //for dropdown menu
 function myFunction(selection) {
-   document.getElementById("dropdown").textContent = selection;
+    
+    //make post request
+    $.post("./orders", function(data, status){
+        
+        //change text using data json that returns from post request
+        document.getElementById("list1").innerHTML = data[0].quantity + " " + data[0].topping;
+        document.getElementById("list2").innerHTML = data[1].quantity + " " + data[1].topping;
+        document.getElementById("list3").innerHTML = data[2].quantity + " " + data[2].topping;
+      });
+   
+    document.getElementById("dropdown").textContent = selection;
+
+
 }
